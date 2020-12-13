@@ -13,6 +13,10 @@
 		64427A752585872200043B96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64427A602585871F00043B96 /* ContentView.swift */; };
 		64427A762585872200043B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64427A612585872200043B96 /* Assets.xcassets */; };
 		64427A772585872200043B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64427A612585872200043B96 /* Assets.xcassets */; };
+		64427A84258589E700043B96 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64427A83258589E700043B96 /* HomeView.swift */; };
+		64427A89258592CC00043B96 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64427A88258592CC00043B96 /* MenuItem.swift */; };
+		64427A8F2585984900043B96 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64427A8E2585984900043B96 /* TransactionItem.swift */; };
+		64427A9425859EBE00043B96 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64427A9325859EBE00043B96 /* TabItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		64427A6E2585872200043B96 /* DigitalWalletApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalWalletApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64427A702585872200043B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64427A712585872200043B96 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		64427A83258589E700043B96 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		64427A88258592CC00043B96 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		64427A8E2585984900043B96 /* TransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
+		64427A9325859EBE00043B96 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		64427A992585A55900043B96 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 		64427A592585871F00043B96 = {
 			isa = PBXGroup;
 			children = (
+				64427A992585A55900043B96 /* README.md */,
 				64427A5E2585871F00043B96 /* Shared */,
 				64427A682585872200043B96 /* iOS */,
 				64427A6F2585872200043B96 /* macOS */,
@@ -57,6 +67,7 @@
 		64427A5E2585871F00043B96 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				64427A87258592B900043B96 /* Model */,
 				64427A5F2585871F00043B96 /* DigitalWalletAppApp.swift */,
 				64427A602585871F00043B96 /* ContentView.swift */,
 				64427A612585872200043B96 /* Assets.xcassets */,
@@ -76,6 +87,8 @@
 		64427A682585872200043B96 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				64427A9225859EB000043B96 /* Model */,
+				64427A82258589DA00043B96 /* View */,
 				64427A692585872200043B96 /* Info.plist */,
 			);
 			path = iOS;
@@ -88,6 +101,31 @@
 				64427A712585872200043B96 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		64427A82258589DA00043B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64427A83258589E700043B96 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64427A87258592B900043B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64427A88258592CC00043B96 /* MenuItem.swift */,
+				64427A8E2585984900043B96 /* TransactionItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64427A9225859EB000043B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64427A9325859EBE00043B96 /* TabItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64427A84258589E700043B96 /* HomeView.swift in Sources */,
+				64427A89258592CC00043B96 /* MenuItem.swift in Sources */,
+				64427A9425859EBE00043B96 /* TabItem.swift in Sources */,
 				64427A742585872200043B96 /* ContentView.swift in Sources */,
+				64427A8F2585984900043B96 /* TransactionItem.swift in Sources */,
 				64427A722585872200043B96 /* DigitalWalletAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
