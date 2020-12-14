@@ -4,10 +4,12 @@ Design de [aplicativo de carteira digital](https://dribbble.com/shots/14715739--
 ## Screenshots
 <p align="center">
     <img src="https://user-images.githubusercontent.com/16376748/102000786-a0df1680-3cc9-11eb-9d4c-b313d7d4eb64.png" width="400">&nbsp;
+    <img src="https://user-images.githubusercontent.com/16376748/102147736-fe9a6c80-3e49-11eb-8d90-0bfe2eb2edd1.png" width="400">&nbsp;
 </p>
 
 ## Vídeos
 - [Vídeo no YouTube - Parte 1](https://youtu.be/bhi-DS8gXjM)
+- [Vídeo no YouTube - Parte 2](https://youtu.be/RIK57emkM0c)
  
 ## Requisitos
 - iOS 14
