@@ -24,6 +24,8 @@
 		64E4021A258C28F500C22C60 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40219258C28F500C22C60 /* SideMenuView.swift */; };
 		64E4021E258C292100C22C60 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4021D258C292100C22C60 /* MenuItemView.swift */; };
 		64E40224258C2E6700C22C60 /* MenuProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40223258C2E6700C22C60 /* MenuProfileView.swift */; };
+		64E40247258D55F500C22C60 /* SpendingActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40246258D55F500C22C60 /* SpendingActivityView.swift */; };
+		64E4024F258D645300C22C60 /* LatestTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4024E258D645300C22C60 /* LatestTransactionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		64E40219258C28F500C22C60 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		64E4021D258C292100C22C60 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		64E40223258C2E6700C22C60 /* MenuProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileView.swift; sourceTree = "<group>"; };
+		64E40246258D55F500C22C60 /* SpendingActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingActivityView.swift; sourceTree = "<group>"; };
+		64E4024E258D645300C22C60 /* LatestTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +150,11 @@
 			isa = PBXGroup;
 			children = (
 				64E401FF258BFE6100C22C60 /* HomeView.swift */,
+				64E4024E258D645300C22C60 /* LatestTransactionsView.swift */,
 				64E40219258C28F500C22C60 /* SideMenuView.swift */,
 				64E4021D258C292100C22C60 /* MenuItemView.swift */,
 				64E40223258C2E6700C22C60 /* MenuProfileView.swift */,
+				64E40246258D55F500C22C60 /* SpendingActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 			files = (
 				64E4021A258C28F500C22C60 /* SideMenuView.swift in Sources */,
 				64E40224258C2E6700C22C60 /* MenuProfileView.swift in Sources */,
+				64E4024F258D645300C22C60 /* LatestTransactionsView.swift in Sources */,
 				64E40200258BFE6100C22C60 /* HomeView.swift in Sources */,
+				64E40247258D55F500C22C60 /* SpendingActivityView.swift in Sources */,
 				64E40203258C063000C22C60 /* MenuItem.swift in Sources */,
 				64427A752585872200043B96 /* ContentView.swift in Sources */,
 				64E4021E258C292100C22C60 /* MenuItemView.swift in Sources */,

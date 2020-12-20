@@ -16,37 +16,55 @@ struct HomeView: View {
         MenuItem(image: "banknote.fill", title: "Bill", backgroundColor: Color(#colorLiteral(red: 1, green: 0.5288571715, blue: 0, alpha: 1))),
     ]
     
+    @State var selectedIndex = 0
+    @State var boxVisible = false
+    @State var selectedHeight: CGFloat = 0.0
+    
     var body: some View {
         HStack {
             SideMenuView()
             
             VStack {
-                HStack(spacing: 0) {
-                    VStack(alignment: .leading) {
-                        Text("Your Balance")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                            .foregroundColor(.gray)
+                ZStack(alignment: .bottomLeading) {
+                    VStack {
+                        HStack(spacing: 0) {
+                            VStack(alignment: .leading) {
+                                Text("Your Balance")
+                                    .font(.headline)
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.gray)
+                                
+                                Text("Rp 8.250.000")
+                                    .font(.largeTitle)
+                                    .foregroundColor(Color("accent"))
+                                    .padding(.top, 8)
+                            }
+                            
+                            Spacer()
+                            
+                            ForEach(0 ..< dashboardMenuItems.count) { i in
+                                VerticalMenuItemView(item: dashboardMenuItems[i])
+                                    .padding()
+                            }
+                        }
+                        .padding()
                         
-                        Text("Rp 8.250.000")
-                            .font(.largeTitle)
-                            .foregroundColor(Color("accent"))
-                            .padding(.top, 8)
+                        Divider()
+                            .padding(.leading)
+                        
+                        SpendingActivityView(selectedIndex: $selectedIndex, boxVisible: $boxVisible, selectedHeight: $selectedHeight)
+                            .padding(.horizontal)
+                            .padding(.top)
                     }
                     
-                    Spacer()
-                    
-                    ForEach(0 ..< dashboardMenuItems.count) { i in
-                        VerticalMenuItemView(item: dashboardMenuItems[i])
-                            .padding()
+                    if boxVisible {
+                        MessageBox()
+                            .offset(x: CGFloat(selectedIndex * 74), y: -selectedHeight - 35)
                     }
                 }
-                .padding()
                 
-                Divider()
-                    .padding(.leading)
-                
-                //LatestTransactionsView()
+                LatestTransactionsView()
+                    .padding(.top)
                 
                 Spacer()
             }
@@ -54,61 +72,6 @@ struct HomeView: View {
         .frame(width: window!.width / 1.2, height: window!.height - 50)
         .background(Color("foreground"))
         .preferredColorScheme(.light)
-    }
-}
-
-struct LatestTransactionsView: View {
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("Latest Transactions")
-                .font(.title2)
-                .foregroundColor(.primary)
-                .fontWeight(.medium)
-                .padding(.leading)
-            
-            ScrollView(.vertical, showsIndicators: false, content: {
-                ForEach(0..<transactionItems.count) { i in
-                    TransactionItemView(item: transactionItems[i])
-                }
-            })
-        }
-    }
-}
-
-struct TransactionItemView: View {
-    var item: TransactionItem
-    
-    var body: some View {
-        HStack(spacing: 0) {
-            Image(systemName: item.image)
-                .font(.title2)
-                .foregroundColor(item.foregroundColor)
-                .frame(width: 50, height: 50)
-                .background(item.backgroundColor)
-                .cornerRadius(13)
-            
-            Text(item.title)
-                .foregroundColor(Color.primary)
-                .fontWeight(.bold)
-                .padding(.leading)
-            
-            Spacer()
-            
-            Text(item.date)
-                .foregroundColor(Color.primary.opacity(0.4))
-            
-            Spacer()
-            
-            Text(item.description)
-                .foregroundColor(Color.primary.opacity(0.4))
-            
-            Spacer()
-            
-            Text(item.value)
-                .foregroundColor(Color.primary)
-                .fontWeight(.bold)
-        }
-        .padding()
     }
 }
 
